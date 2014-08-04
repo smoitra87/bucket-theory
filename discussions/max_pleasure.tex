@@ -50,8 +50,10 @@ The end product of bucket theory is to derive pleasure at the Pleasure Caf\'e. A
 \end{abstract} 
 
 \section{Pleasure}
+Pleasure is a catch all word to describe mental states that we find desirable. From a purely reductionist perspective it is nothing but a biochemical lightshow. One in which we are puppets pulled around by our genetic strings. We offer Theorem~\ref{mp2} $(MP^2 \; Theory)$ which attempts to put this biochemical puppetry in a more concrete setting. Every theory needs certain assumptions and we assume Axiom~\ref{compare-actions}. We make no claims that Bucket Theory~\cite{Bucket2014} is scientifically accurate, but merely a useful frame of reference to think about the human condition.
 
 \begin{axiom}
+\label{compare-actions}
 Human beings evaluate actions by the amount of pleasure or pain it offers them.
 \end{axiom}
 
@@ -69,19 +71,20 @@ Every voluntary action has an underlying intent of maximizing pleasure or minimi
 If a voluntary action did not have an underlying intent of maximizing pleasure or minimizing pain, then the person would be better off by not taking the action.
 \end{proof}
 
-\subsection{The Multi-Nutrient theory}
-Bucket theory~\cite{bucket2014} defines three kinds of pleasures $ \mathcal{P} = \{peace, joy, thrill \}$ : 
+\subsection{Multi-Nutrient Pleasures}
+Not all pleasures are the same. Some pleasures are more intense than others while some others last longer. Each kind of pleasure has an necessary role without which our human experience is incomplete and left wanting. Bucket theory~\cite{bucket2014} defines three kinds of pleasures $ \mathcal{P} = \{peace, joy, thrill \}$ : 
 \begin{enumerate}
 \item Peace \& Tranquility $(P_{peace})$ .
 \item Joy \& Happiness  $(P_{joy})$ .
 \item Thrill \& Ecstacy $(P_{thrill})$
 \end{enumerate}
 
-$P_{peace}$ is a long lasting pleasurable state of mind ; $P_{joy}$ is a medium term pleasure that lasts a few days such as when taking a vacation or spending time with family ;  $P_{thrill}$ is much more short term lasting merely a few moments. 
-
+$P_{peace}$ is a long lasting pleasurable state of mind ; $P_{joy}$ is a medium term pleasure that lasts a few days such as when taking a vacation or spending time with family ;  $P_{thrill}$ is much more short term lasting merely a few moments.  Each of these pleasures can be thought of as \textit{nutrients} that make up a balanced meal. Take away one of them and you will eventually fall sick.
 
 \subsection{Mathematical Model}
-We attempt to model the creation and consumption of pleasure using a system of differential equations~(Equation \ref{eqn:diffeq}). The variables $V_i(t),\; i\in \mathcal{V}$ correspond to the different value buckets. The value resources are converted into a control currency, $C(t)$. Control is then used to purchase the different pleasure nutrients $P_j(t) ; j\in \mathcal{P}$. This process is illustrated in Figure~\ref{fig:pleasure}.
+The generation and consumption of pleasure happens in a harmonious cycle. 
+Value $\rightarrow$ Control $\rightarrow$ Pleasure $\rightarrow$ Value $\rightarrow$ \ldots.
+We attempt to model the creation and consumption of pleasure using a system of differential equations~(Equation \ref{eqn:diffeq}). Again, this is simply an illustrative exercise to put our intuitive ideas about bucket theory into a more concrete form. The variables $V_i(t),\; i\in \mathcal{V}$ correspond to the different value buckets. The value resources are converted into a control currency, $C(t)$. Control is then used to purchase the different pleasure nutrients $P_j(t) ; j\in \mathcal{P}$. This process is illustrated in Figure~\ref{fig:pleasure}.
 
 \begin{align}\label{eqn:diffeq}
 \frac{dC(t)}{dt}  &= \sum_{i \in \mathcal{V}}\alpha_i V_i(t) - \sum_{j \in \mathcal{P}}\beta_j C(t)\\
@@ -135,17 +138,13 @@ We attempt to model the creation and consumption of pleasure using a system of d
 \label{fig:pleasure}
 \end{figure}
 
-\section{Simulations}
+\subsection{Half Buckets vs Plunging}
+The control factory~\cite{Bucket2014} holds several different recipes.
+
 
 \subsection{Hedonism vs Zen}
 
-
-\subsection{Half Buckets vs Plunging}
-
-
 \subsection{Organic vs Forced}
 
-
-\subsection{}
 
 \end{document}
