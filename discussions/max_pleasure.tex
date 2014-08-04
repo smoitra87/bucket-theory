@@ -18,9 +18,22 @@
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
 
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{axiom}[theorem]{Axiom}
+
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
 \begin{document}
 
-\title{Pleasure under Bucket Theory}
+\title{A discussion on Pleasure under Bucket Theory}
 
 \author{
 	Moitra, Subhodeep \\ 
@@ -33,10 +46,30 @@
 \maketitle
 
 \begin{abstract}
-The end product of bucket theory is to derive pleasure at the Pleasure Caf\'e. An unsatisfying consequence from this theory is that the ``purpose'' of life is merely about ``pleasure''. In this article, we will clarify what it means to \textit{pleasure} and provide a rough mathematical model for the same. We also discuss the other loaded word \textit{purpose} and attempt to show that even though the concept is inherently flawed there might be benefits to thinking under this paradigm.
-\end{abstract}
+The end product of bucket theory is to derive pleasure at the Pleasure Caf\'e. An unsatisfying consequence from this theory is that the ``purpose'' of life is merely about ``pleasure''. In this article, we will lead a discussion about \textit{pleasure} and provide a rough mathematical model for creation and consumption of pleasure. We also attempt to illustrate the choices that we unconsciously make (1) Half Buckets vs Plunging (2) Hedonism vs Zen (3) Organic vs Forced. We hope that this discussion will bring to the forefront our unconscious choices and help us in leading a more deliberate and fulfilling life. 
+\end{abstract} 
 
 \section{Pleasure}
+
+\begin{axiom}
+Human beings evaluate actions by the amount of pleasure or pain it offers them.
+\end{axiom}
+
+\begin{definition}
+An action is defined to be voluntary if a person chooses to take the action despite having the option of not taking it.
+\end{definition}
+
+\begin{theorem}
+\emph{$(MP^2 \; Theory)$}
+\label{mp2}
+Every voluntary action has an underlying intent of maximizing pleasure or minimizing pain.
+\end{theorem}
+
+\begin{proof}
+If a voluntary action did not have an underlying intent of maximizing pleasure or minimizing pain, then the person would be better off by not taking the action.
+\end{proof}
+
+\subsection{The Multi-Nutrient theory}
 Bucket theory~\cite{bucket2014} defines three kinds of pleasures $ \mathcal{P} = \{peace, joy, thrill \}$ : 
 \begin{enumerate}
 \item Peace \& Tranquility $(P_{peace})$ .
@@ -46,14 +79,14 @@ Bucket theory~\cite{bucket2014} defines three kinds of pleasures $ \mathcal{P} =
 
 $P_{peace}$ is a long lasting pleasurable state of mind ; $P_{joy}$ is a medium term pleasure that lasts a few days such as when taking a vacation or spending time with family ;  $P_{thrill}$ is much more short term lasting merely a few moments. 
 
-\subsection{Mathematical Model}
-We attempt to model the creation and consumption of pleasure using a system of differential equations~\ref{eqn:diffeq}. The variables $V_i(t),\; i\in \mathcal{V}$ correspond to the different value buckets. The value resources are converted into a control currency, $C(t)$. Control is then used to purchase the different pleasure nutrients $P_j(t) ; j\in \mathcal{P}$.
 
-\begin{align}
+\subsection{Mathematical Model}
+We attempt to model the creation and consumption of pleasure using a system of differential equations~(Equation \ref{eqn:diffeq}). The variables $V_i(t),\; i\in \mathcal{V}$ correspond to the different value buckets. The value resources are converted into a control currency, $C(t)$. Control is then used to purchase the different pleasure nutrients $P_j(t) ; j\in \mathcal{P}$. This process is illustrated in Figure~\ref{fig:pleasure}.
+
+\begin{align}\label{eqn:diffeq}
 \frac{dC(t)}{dt}  &= \sum_{i \in \mathcal{V}}\alpha_i V_i(t) - \sum_{j \in \mathcal{P}}\beta_j C(t)\\
 \frac{dP_j(t)}{dt}  &= \beta_j C(t) - \sum_{i \in \mathcal{V}}\gamma_{ij}V_j(t) \\
 \frac{dV_i(t)}{dt}  &= \sum_{j \in \mathcal{P}}\gamma_{ij}P_j(t) - \alpha_i V_i(t)
-\ref{eqn:diffeq}
 \end{align}
 
 \begin{figure}
@@ -96,12 +129,23 @@ We attempt to model the creation and consumption of pleasure using a system of d
       (Vw.north  -| Vw.east)  rectangle (Vf.south  -| Vf.west)
       (C.north  -| C.east)  rectangle (C.south  -| C.west)
       (Pp.north  -| Pp.east)  rectangle (Pt.south  -| Pt.west);
-//      (w1'.north -| l1'.east) rectangle (w2'.south -| e1'.west);
   \end{pgfonlayer}
 \end{tikzpicture}
-\caption{A simple instance of Bucket Theory. There are two value buckets $\mathcal{V}=\{work,family\}$, the control bank $C$ and three nutrients at the pleasure Caf\'e $\mathcal{P}=\{peace, joy, thrill\}$} 
-\ref{fig:pleasure}
+\caption{A simple instance of Bucket Theory. There are two value buckets $\mathcal{V}=\{work,family\}$, the control bank $C$ and three nutrients at the pleasure Caf\'e $\mathcal{P}=\{peace, joy, thrill\}$.  The value resources are converted into a control currency, $C(t)$. Control is then used to purchase the different pleasure nutrients $P_j(t) ; j\in \mathcal{P}$. }
+\label{fig:pleasure}
 \end{figure}
 
+\section{Simulations}
+
+\subsection{Hedonism vs Zen}
+
+
+\subsection{Half Buckets vs Plunging}
+
+
+\subsection{Organic vs Forced}
+
+
+\subsection{}
 
 \end{document}
